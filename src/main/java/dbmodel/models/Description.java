@@ -10,6 +10,7 @@ public class Description {
     private String text;
     private LocalDate sendDate;
     private List<String> photosLinks;
+    private List<String> alreadySentTo;
 
     public Description() {
     }
@@ -21,6 +22,7 @@ public class Description {
         description.setText(this.getText());
         description.setSendDate(convertToDate(this.getSendDate()));
         description.setPhotosLinks(this.getPhotosLinks());
+        description.setAlreadySentTo(this.getAlreadySentTo());
         return description;
     }
 
@@ -62,6 +64,14 @@ public class Description {
 
     public void setPhotosLinks(List<String> photosLinks) {
         this.photosLinks = photosLinks;
+    }
+
+    public List<String> getAlreadySentTo() {
+        return alreadySentTo;
+    }
+
+    public void setAlreadySentTo(List<String> alreadySentTo) {
+        this.alreadySentTo = alreadySentTo;
     }
 
     private Date convertToDate(LocalDate dateToConvert) {
