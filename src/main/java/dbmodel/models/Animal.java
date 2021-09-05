@@ -14,6 +14,7 @@ public class Animal {
     private String sex;
     private String lastState;
     private List<String> helperCodes;
+    private String photoLink;
 
     public Animal() {
     }
@@ -28,6 +29,7 @@ public class Animal {
         animal.setSex(this.getSex());
         animal.setLastState(this.getLastState());
         animal.setHelperCodes(this.getHelperCodes());
+        animal.setPhotoLink(this.getPhotoLink());
         return animal;
     }
 
@@ -93,6 +95,14 @@ public class Animal {
 
     public void setHelperCodes(List<String> helperCodes) {
         this.helperCodes = helperCodes;
+    }
+
+    public String getPhotoLink() {
+        return photoLink;
+    }
+
+    public void setPhotoLink(String photoLink) {
+        this.photoLink = photoLink;
     }
 
     @Override

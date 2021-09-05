@@ -6,7 +6,7 @@
 
     <groupId>pl.edu.uj.czernecki</groupId>
     <artifactId>db-model</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>

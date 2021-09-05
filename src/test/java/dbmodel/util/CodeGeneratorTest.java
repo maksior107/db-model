@@ -1,7 +1,7 @@
 package dbmodel.util;
 
 import dbmodel.models.Animal;
-import dbmodel.models.Helper;
+import dbmodel.models.User;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -17,10 +17,10 @@ class CodeGeneratorTest {
         //given
         Animal animal = new Animal();
         animal.setId(ANIMAL_ID);
-        Helper helper = new Helper();
-        helper.setEmail(HELPER_EMAIL);
+        User user = new User();
+        user.setEmail(HELPER_EMAIL);
         //when/then
-        assertThat(CodeGenerator.getCode(animal, helper)).isEqualTo(CODE);
+        assertThat(CodeGenerator.getCode(animal, user)).isEqualTo(CODE);
     }
 
     @Test

@@ -14,6 +14,7 @@ public class Animal {
     private Date dischargeDate;
     private String sex;
     private String lastState;
+    private String photoLink;
     private List<String> helperCodes;
 
     public Animal() {
@@ -83,6 +84,14 @@ public class Animal {
         this.helperCodes = helperCodes;
     }
 
+    public String getPhotoLink() {
+        return photoLink;
+    }
+
+    public void setPhotoLink(String photoLink) {
+        this.photoLink = photoLink;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -111,6 +120,7 @@ public class Animal {
         animal.setSex(this.getSex());
         animal.setLastState(this.getLastState());
         animal.setHelperCodes(this.getHelperCodes());
+        animal.setPhotoLink(this.getPhotoLink());
         return animal;
     }
 

@@ -1,13 +1,17 @@
 package dbmodel.util;
 
 import dbmodel.models.Animal;
-import dbmodel.models.Helper;
+import dbmodel.models.User;
 
 import java.util.Base64;
 
 public class CodeGenerator {
-    public static String getCode(Animal animal, Helper helper) {
-        return Base64.getEncoder().encodeToString((animal.getId() + "_" + helper.getEmail()).getBytes());
+    public static String getCode(Animal animal, User user) {
+        return getCode(animal,user.getEmail());
+    }
+
+    public static String getCode(Animal animal, String email) {
+        return Base64.getEncoder().encodeToString((animal.getId() + "_" + email).getBytes());
     }
 
     public static String getAnimalId(String code) {
